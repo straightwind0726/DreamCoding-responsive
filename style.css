@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+nav {
+    background-color: blueviolet;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    padding: 0 24px;
+}
+
+nav h1 a {
+    color: aliceblue;
+    font-size: 24px;
+}
+
+nav h1 i {
+    color: orange;
+}
+
+nav .menu {
+    display: flex;
+}
+
+nav .menu li {
+    margin: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 300ms all ease-in;
+}
+
+nav .menu li:hover {
+    opacity: 0.85;
+    background-color: rgb(166, 95, 233);
+}
+
+nav .link {
+    display: flex;
+}
