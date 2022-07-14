@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+ul {
+    margin: none;
+}
+
 li {
     list-style: none;
     cursor: pointer;
@@ -20,7 +24,6 @@ body {
 
 nav {
     background-color: blueviolet;
-    height: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,4 +58,70 @@ nav .menu li:hover {
 
 nav .link {
     display: flex;
+}
+
+nav .link li {
+    margin: 4px;
+    padding: 4px;
+    border-radius: 8px;
+    transition: 300ms all ease-in;
+}
+
+nav .link li:hover {
+    transform: scale(1.2);
+    opacity: 0.85;
+    background-color: rgb(166, 95, 233);
+}
+
+.hamberger {
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 22px;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    transition: 300ms all ease-in;
+}
+
+.hamberger:hover {
+    transform: scale(1.2);
+}
+
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav h1 {
+        padding-top: 8px;
+    }
+
+    nav .menu, nav .link {
+        display: none;
+    }
+
+    nav .menu {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .link {
+        padding-bottom: 8px;
+    }
+
+    .hamberger {
+        display: block;
+    }
+
+    .menu.active,
+    .link.active {
+        display: flex;
+    }
+
 }
